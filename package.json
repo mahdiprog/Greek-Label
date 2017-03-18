@@ -1,0 +1,15 @@
+{
+	"version": "1.0.0",
+	"name": "greek.label",
+	"private": true,
+    "devDependencies": {
+        "bower": "*",
+        "del": "*",
+        "gulp": "*",
+        "gulp-bower": "*",
+        "gulp-clean-css": "*",
+        "gulp-concat": "*",
+        "gulp-strip-comments": "*",
+        "gulp-uglify": "*"
+    }
+}
