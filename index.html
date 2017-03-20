@@ -2,9 +2,194 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/flickity/dist/flickity.min.css" rel="stylesheet" />
+    <link href="assets/css/common.css" rel="stylesheet" />
+    <link href="assets/css/desktop.css" rel="stylesheet" />
+    <link href="assets/css/mobile.css" rel="stylesheet" />
+    <link href="assets/css/tablet.css" rel="stylesheet" />
+    <link href="bower_components/ionicons/css/ionicons.css" rel="stylesheet" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
 </head>
 <body>
-<div class="pane"></div>
+<div class="pane logo-pane">
+    <img src="assets/svg/Logo.svg" class="logo center-block"/>
+    <div class="title center-block">A team of self confessed geeks who are all about great digital design</div>
+    <a class="arrow-icon white center-block" href="#section-1">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane gray-pane" id="section-1">
+    <img src="assets/svg/machine.svg" class="machine center-block"/>
+    <div class="title center-block">Some agencies love <span class="red">design</span>, but don't know how to build
+    </div>
+    <a class="arrow-icon white center-block" href="#section-2">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane gray-pane" id="section-2">
+    <img src="assets/svg/problem.svg" class="problem center-block"/>
+    <div class="title center-block">Some agencies know how to <span class="red">build</span> but can’t do design
+    </div>
+    <a class="arrow-icon white center-block" href="#section-3">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane gray-pane" id="section-3">
+    <img src="assets/svg/solution.svg" class="solution center-block"/>
+    <div class="title center-block">We love <span class="red">both</span></div>
+    <a class="arrow-icon white center-block" href="#services">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane white-pane" id="services">
+    <div class="title center-block">Services</div>
+    <div class="service-container">
+        <div class="service">
+            <div class="icon development"></div>
+            <div class="name">Web Developement</div>
+        </div>
+        <div class="service">
+            <div class="icon design"></div>
+            <div class="name">Design</div>
+        </div>
+        <div class="service">
+            <div class="icon branding"></div>
+            <div class="name">Branding</div>
+        </div>
+        <div class="service">
+            <div class="icon ux"></div>
+            <div class="name">UX Research</div>
+        </div>
+    </div>
+    <a class="arrow-icon black center-block" href="#clients">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane gray-pane" id="clients">
+    <div class="title center-block">Clients</div>
+    <div class="carousel">
+        <div class="carousel-cell">...</div>
+        <div class="carousel-cell">...</div>
+        <div class="carousel-cell">...</div>
+        <div class="carousel-cell">...</div>
+        <div class="carousel-cell">...</div>
+    </div>
+    <a class="arrow-icon black center-block" href="#map">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane gray-pane" id="map">
+    <div class="title center-block">How to find us</div>
+    <div id="map-container">
+        <div class="map-shadow-top"></div>
+        <div class="map-shadow-bottom"></div>
+        <div id="google-map"></div>
+    </div>
+    <a class="arrow-icon white center-block" href="#contact">
+        <i class="ion-chevron-down"></i>
+    </a>
+</div>
+<div class="pane gray-pane" id="contact">
+    <div class="title center-block">Contact</div>
+    <div class="form-container">
+        <input type="text" placeholder="Name"/>
+        <input type="text" placeholder="Email"/>
+        <textarea placeholder="Message"></textarea>
+        <button>Send Message!</button>
+        Or phone on : 01923&nbsp;220121
+    </div>
+</div>
+<div></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 400);
+                    return false;
+                }
+            }
+        });
+        // Init Carousel
+        $('.carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true
+        });
+    });
+
+    function initMap() {
+        var office = new google.maps.LatLng(51.51, -0.12);
+
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "bower_components/google-infobox/google-infobox.js";
+        $("head").append(script);
+        
+          var map = new google.maps.Map(document.getElementById('google-map'), {
+              center: office,
+          zoom: 16,
+          zoomControl: true,
+          zoomControlOptions: {
+              position: google.maps.ControlPosition.LEFT_CENTER
+          },
+          scaleControl: true,
+          mapTypeControl: false,
+          fullscreenControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [{
+              stylers: [{
+                  saturation: -100
+              }]
+          }]
+          });
+          
+        var marker = new google.maps.Marker({
+            position: office,
+            map: map,
+            icon: '/assets/images/map-marker.png'
+        });
+
+        var boxText = document.createElement("div");
+        boxText.innerHTML = 'Geek Label<br/>4th Floor<br/>27 - 33 Bethnal Green Road<br/>Shoreditch<br/>London<br/>E1 6LA';
+        var ibOptions = {
+            content: boxText,
+            disableAutoPan: false,
+            maxWidth: 0,
+            pixelOffset: new google.maps.Size(40, -95),
+            zIndex: null,
+            boxStyle: {
+                width: "180px",
+                height: "170px",
+                "line-height": "20px",
+                "font-size": "14px",
+                "background-color": "#fff",
+                "padding": "20px",
+                "box-shadow": "0 0 10px 1px #ccc",
+                "color": "#666"
+    }
+			, closeBoxURL: ""
+			, infoBoxClearance: new google.maps.Size(1, 1)
+			, isHidden: false
+			, pane: "floatPane"
+			, enableEventPropagation: false
+        };
+        
+        var ib = new InfoBox(ibOptions);
+        ib.open(map, marker);
+     }
+    
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZtPdiEGweiBVQvF5xKOCKTYB2Zhf9AKc&callback=initMap">
+    </script>
 </body>
+
 </html>

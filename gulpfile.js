@@ -10,48 +10,34 @@ var strip = require('gulp-strip-comments');
 
 var config = {
     vendorSrc: [
-       'bower_components/underscore/underscore-min.js',
-         'bower_components/angular/angular.min.js',
-          "bower_components/jquery/dist/jquery.slim.min.js",
-         'bower_components/bootstrap/dist/js/bootstrap.min.js',
-         "bower_components/angular-route/angular-route.min.js",
-         "bower_components/angular-animate/angular-animate.min.js",
-         "wwwroot/vendors/ui-bootstrap-custom-tpls-2.5.0.min.js",
-         "bower_components/ng-rating/js/ng-rating.js",
-         //'bower_components/angular-animate/angular-animate.min.js',
-         //'bower_components/angular-block-ui/dist/angular-block-ui.min.js',
-         'bower_components/angular-toastr/dist/angular-toastr.tpls.min.js',
+       "bower_components/jquery/dist/jquery.min.js",
+         "bower_components/google-infobox/google-infobox.js",
+         "bower_components/flickity/dist/flickity.pkgd.min.js"
     ],
 
     cssSrc: [
-        //'bower_components/angular-block-ui/dist/angular-block-ui.min.css',
-       'bower_components/bootstrap/dist/css/bootstrap.min.css',
-       'bower_components/ng-rating/css/ng-rating.css',
-       'bower_components/font-awesome/css/font-awesome.min.css',
-
-        //'bower_components/angular-loading-bar/build/loading-bar.min.css',
-        'bower_components/angular-toastr/dist/angular-toastr.min.css',
-         'wwwroot/assets/css/app.css'
+       
+        'assets/css/app.css'
     ],
 
 
     fontawsomefonts: 'bower_components/font-awesome/fonts/*.*',
 
-    fontsout: 'wwwroot/assets/fonts',
-    cssout: 'wwwroot/assets/css'
+    fontsout: 'assets/fonts',
+    cssout: 'assets/css'
 
 }
 
 //Create a jquery bundled file
-gulp.task('vendor-bundle', ['bower-restore'], function () {
+gulp.task('vendor-bundle', ['bower-restore', 'clean-scripts'], function () {
     return gulp.src(config.vendorSrc)
-     .pipe(concat('vendor-bundle.min.js'))
-     .pipe(gulp.dest('wwwroot/assets/vendor'));
+     .pipe(concat('script.js'))
+     .pipe(gulp.dest('assets/js'));
 });
 
 
-gulp.task('clean-scripts', ['vendor-bundle'], function (cb) {
-    del(['www/scripts/vendor-bundle.min.js'], cb);
+gulp.task('clean-scripts', [], function (cb) {
+    del(['assets/js/script.js'], cb);
 });
 
 //Create a bootstrap bundled file
@@ -65,7 +51,7 @@ gulp.task('clean-scripts', ['vendor-bundle'], function (cb) {
 
 
 // Combine and the vendor files from bower into bundles (output to the Scripts folder)
-gulp.task('scripts', ['clean-scripts'], function () {
+gulp.task('scripts', ['vendor-bundle'], function () {
 
 });
 

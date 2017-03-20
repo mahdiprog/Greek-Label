@@ -1,0 +1,113 @@
+﻿@media (min-width: 992px) {  
+.logo {
+    width: 20vw;
+    padding-top: 40vh;
+}
+
+.logo-pane .title {
+    width: 35vw;
+    font-size: 22px;
+}
+.arrow-icon {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+    padding: 11px 0 0 13px;
+}
+.arrow-icon i {
+    font-size: 20px;
+
+}
+.machine {
+    height: 62vh;
+    padding-top: 20vh;
+}
+.problem {
+    height: 67vh;
+    padding-top: 20vh;
+}
+.solution {
+    height: 62vh;
+    padding-top: 20vh;
+}
+#section-1 .title,#section-2 .title,#section-3 .title
+{ 
+    width: 60vw;
+    font-size: 32px;
+}
+#section-1 .title {
+        padding-top: 15vh;
+    }
+    #section-2 .title {
+        padding-top: 10vh;
+    }
+    #section-3 .title {
+        padding-top: 10vh;
+    }
+    #services .title,#clients .title,#map .title,#contact .title {
+        font-size: 65px;
+        padding-top: 8vh;
+    }
+    #services .service-container {
+        width: 1100px;
+        height: 300px;
+        position:absolute;
+       top: 50%;
+        left: 50%;
+        margin: -150px 0 0 -550px;
+    }
+    .service-container .service {
+        float: left;
+        width: 25%;
+    }
+    .service-container .service>.icon {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #d83454;
+        color: #fff;
+        margin: 0 auto;
+    }
+    .service-container .service>.name {
+        padding-top: 55px;
+        font-size: 23px;
+        text-align: center;
+    }
+    .service-container .service > .icon {
+    background-size: 55% auto;
+}
+.service-container .service > .icon.development {
+    background-position: 45px -560px;
+}
+.service-container .service > .icon.design {
+    background-position: 45px -168px;
+}
+.service-container .service > .icon.branding {
+    background-position: 47px -358px;
+}
+.service-container .service > .icon.ux {
+    background-position: 46px 50px;
+}
+
+#clients .carousel {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 100px;
+}
+#clients .carousel-cell {
+    width: 33%;
+    background-color: red;
+    text-align: center;
+    margin: 10px;
+}
+#clients .flickity-page-dots {
+    display: none;
+}
+#map-container {
+   margin-top: 10vh;
+}
+#contact .form-container {
+    width: 35%;
+}
+
+}
