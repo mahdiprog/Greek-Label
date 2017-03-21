@@ -1,114 +1,127 @@
 ﻿@media (max-width: 767px) {
     .logo {
-    width: 70vw;
-    padding-top: 25vh;
-}
-.logo-pane .title {
-    width: 65vw;
-    font-size: 16px;
-}
-.arrow-icon {
-    width: 40px;
-    height:40px;
-    border-width: 2px;
-    padding: 8px 0 0 11px;
-}
-.arrow-icon i {
-    font-size: 15px;
-    font-weight: 200;
-}
-.machine {
-    width: 70vw;
-    padding-top: 20vh;
-}
-.problem {
-    width: 70vw;
-    padding-top: 20vh;
-}
-.solution {
-    width: 70vw;
-    padding-top: 20vh;
-}
-#section-1 .title,#section-2 .title,#section-3 .title
-{ 
-    width: 65vw;
-    font-size: 24px;
-}
-#section-1 .title {
+        width: 70vw;
+        padding-top: 25vh;
+    }
+
+    .logo-pane .title {
+        width: 65vw;
+        font-size: 16px;
+    }
+
+    .arrow-icon {
+        width: 40px;
+        height: 40px;
+        border-width: 2px;
+        padding: 8px 0 0 11px;
+    }
+
+        .arrow-icon i {
+            font-size: 15px;
+            font-weight: 200;
+        }
+
+    .machine {
+        width: 70vw;
+        padding-top: 20vh;
+    }
+
+    .problem {
+        width: 70vw;
+        padding-top: 20vh;
+    }
+
+    .solution {
+        width: 70vw;
+        padding-top: 20vh;
+    }
+
+    #section-1 .title, #section-2 .title, #section-3 .title {
+        width: 65vw;
+        font-size: 24px;
         padding-top: 5vh;
     }
-    #section-2 .title {
-        padding-top: 5vh;
-    }
+
+   
     #section-3 .title {
         padding-top: 15vh;
     }
-    #services .title,#map .title,#contact .title {
+
+    #services .title, #clients .title, #map .title, #contact .title {
         font-size: 40px;
         margin-top: 8vh;
     }
+
     #services .service-container {
         width: 70%;
         height: 90vh;
         margin: 0 auto;
     }
+
     .service-container .service {
         float: left;
         width: 100%;
         margin-top: 5vh;
     }
-    .service-container .service>.icon {
-        float: left;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #d83454;
-        color: #fff;
-        margin: 0 auto;
+
+        .service-container .service > .icon {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d83454;
+            color: #fff;
+            margin: 0 auto;
+        }
+
+        .service-container .service > .name {
+            font-size: 15px;
+            text-align: left;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 15px;
+        }
+
+        .service-container .service > .icon {
+            background-size: 60% auto;
+        }
+
+            .service-container .service > .icon.development {
+                background-position: 10px -155px;
+            }
+
+            .service-container .service > .icon.design {
+                background-position: 10px -50px;
+            }
+
+            .service-container .service > .icon.branding {
+                background-position: 10px -100px;
+            }
+
+            .service-container .service > .icon.ux {
+                background-position: 10px 12px;
+            }
+
+    #clients .carousel {
+        width: 100%;
     }
-    .service-container .service>.name {
-        font-size: 15px;
-        text-align: left;
-        float: left;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 15px;
+
+    #clients .carousel-cell {
+        width: 100%;
+        text-align: center;
     }
-    .service-container .service > .icon {
-    background-size: 60% auto;
-}
-.service-container .service > .icon.development {
-    background-position: 10px -155px;
-}
-.service-container .service > .icon.design {
-    background-position: 10px -50px;
-}
-.service-container .service > .icon.branding {
-    background-position: 10px -100px;
-}
-.service-container .service > .icon.ux {
-    background-position: 10px 12px;
-}
-#clients .carousel {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 20px;
-}
-#clients .carousel-cell {
-    width: 100%;
-    background-color: red;
-    text-align: center;
-}
-.flickity-prev-next-button {
-    display: none;
-}
-.flickity-page-dots {
-    margin: 0 -20px;
-}
-#map-container {
-   margin-top: 10vh;
-}
-#contact .form-container {
-    width: 80%;
-}
+
+    .flickity-page-dots {
+        margin: 0 -20px;
+    }
+
+    #map-container {
+        margin-top: 10vh;
+    }
+
+    #contact .form-container {
+        width: 80%;
+        font-size: 19px;
+    }
 }

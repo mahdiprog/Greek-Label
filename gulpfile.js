@@ -16,12 +16,16 @@ var config = {
     ],
 
     cssSrc: [
-       
-        'assets/css/app.css'
+       'bower_components/flickity/dist/flickity.min.css',
+       'assets/css/common.css',
+       'assets/css/mobile.css',
+       'assets/css/tablet.css',
+       'assets/css/desktop.css',
+       'bower_components/ionicons/css/ionicons.css'
     ],
 
 
-    fontawsomefonts: 'bower_components/font-awesome/fonts/*.*',
+    fontawsomefonts: 'bower_components/ionicons/fonts/*.*',
 
     fontsout: 'assets/fonts',
     cssout: 'assets/css'
@@ -29,7 +33,7 @@ var config = {
 }
 
 //Create a jquery bundled file
-gulp.task('vendor-bundle', ['bower-restore', 'clean-scripts'], function () {
+gulp.task('vendor-bundle', ['bower-restore'], function () {
     return gulp.src(config.vendorSrc)
      .pipe(concat('script.js'))
      .pipe(gulp.dest('assets/js'));

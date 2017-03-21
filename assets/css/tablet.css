@@ -1,98 +1,125 @@
 ﻿@media (min-width: 768px) and (max-width: 991px) {
     .logo {
-    width: 33vw;
-    padding-top: 40vh;
-}
-.logo-pane .title {
-    width: 48vw;
-    font-size: 20px;
-}
-.arrow-icon {
-    width: 50px;
-    height: 50px;
-    border-width: 3px;
-    padding: 11px 0 0 13px;
-}
-.arrow-icon i {
-    font-size: 19px;
+        width: 33vw;
+        padding-top: 40vh;
+    }
 
-}
-.machine {
-    width: 50vw;
-    padding-top: 20vh;
-}
-.problem {
-    width: 50vw;
-    padding-top: 20vh;
-}
-.solution {
-    width: 50vw;
-    padding-top: 20vh;
-}
-#section-1 .title,#section-2 .title,#section-3 .title
-{ 
-    width: 50vw;
-    font-size: 29px;
-}
-#section-1 .title {
+    .logo-pane .title {
+        width: 48vw;
+        font-size: 20px;
+    }
+
+    .arrow-icon {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+        padding: 11px 0 0 13px;
+    }
+
+        .arrow-icon i {
+            font-size: 19px;
+        }
+
+    .machine {
+        width: 50vw;
+        padding-top: 20vh;
+    }
+
+    .problem {
+        width: 50vw;
+        padding-top: 20vh;
+    }
+
+    .solution {
+        width: 50vw;
+        padding-top: 20vh;
+    }
+
+    #section-1 .title, #section-2 .title, #section-3 .title {
+        width: 50vw;
+        font-size: 29px;
         padding-top: 10vh;
     }
-    #section-2 .title {
-        padding-top: 10vh;
-    }
+
     #section-3 .title {
         padding-top: 20vh;
     }
-    #services .title,#map .title,#contact .title {
+
+    #services .title, #map .title, #clients .title, #contact .title {
         font-size: 48px;
         margin-top: 5vh;
     }
+
     #services .service-container {
         width: 50%;
         height: 90vh;
         margin: 0 auto;
     }
+
     .service-container .service {
         float: left;
         width: 100%;
         margin-top: 5vh;
     }
-    .service-container .service>.icon {
-        float: left;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background-color: #d83454;
-        color: #fff;
-        margin: 0 auto;
+
+        .service-container .service > .icon {
+            float: left;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #d83454;
+            color: #fff;
+            margin: 0 auto;
+        }
+
+        .service-container .service > .name {
+            font-size: 18px;
+            text-align: left;
+            float: left;
+            height: 120px;
+            line-height: 120px;
+            padding-left: 25px;
+        }
+
+        .service-container .service > .icon {
+            background-size: 60% auto;
+        }
+
+            .service-container .service > .icon.development {
+                background-position: 25px -372px;
+            }
+
+            .service-container .service > .icon.design {
+                background-position: 25px -116px;
+            }
+
+            .service-container .service > .icon.branding {
+                background-position: 25px -238px;
+            }
+
+            .service-container .service > .icon.ux {
+                background-position: 25px 26px;
+            }
+
+    #clients .carousel {
+        width: 90%;
     }
-    .service-container .service>.name {
-        font-size: 18px;
-        text-align: left;
-        float: left;
-        height: 120px;
-        line-height: 120px;
-        padding-left: 25px;
+
+    #clients .carousel-cell {
+        width: 50%;
+        text-align: center;
+        margin: 10px;
     }
-    .service-container .service > .icon {
-    background-size: 60% auto;
+
+    .flickity-page-dots {
+        margin: 0 -20px;
+    }
+
+    #map-container {
+        margin-top: 10vh;
+    }
+
+    #contact .form-container {
+        width: 60%;
+    }
 }
-.service-container .service > .icon.development {
-    background-position: 25px -372px;
-}
-.service-container .service > .icon.design {
-    background-position: 25px -116px;
-}
-.service-container .service > .icon.branding {
-    background-position: 25px -238px;
-}
-.service-container .service > .icon.ux {
-    background-position: 25px 26px;
-}
-#map-container {
-   margin-top: 10vh;
-}
-#contact .form-container {
-    width: 60%;
-}
- }
